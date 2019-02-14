@@ -13,8 +13,10 @@ class Today extends React.Component
     render()
     {
 return(
+<div className="image" style={{backgroundColor: "#C7FCE5",height:"550px"}}>
+<CalendarData />
 
-    <CalendarData/>
+</div>
 )
 
 }

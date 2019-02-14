@@ -16,7 +16,7 @@ console.log(props.arrayNew.userName)
 return(
 
         <section>
-    <main>
+    <main style={{padding:"125px 125px"}}>
         <article>
         User : {capital_letter(props.arrayNew.userName)}
         </article>

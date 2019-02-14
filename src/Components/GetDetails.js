@@ -29,8 +29,8 @@ class GetDetails extends Component {
                     <PrintDetails arrayNew={nowBooked} />
                 )
             return (
-                <div>
-                <h1>Slot is free{tillDate}</h1>
+                <div id="first">
+                <h1 style={{textAlign: "center"}}>Slot is free{tillDate}</h1>
                </div> 
             )
 

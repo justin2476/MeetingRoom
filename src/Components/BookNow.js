@@ -55,7 +55,9 @@ class BookNow extends React.Component{
           };
     return (
         <form style={divStyle} onSubmit={this.postHandler} >  
-               UserName:<input 
+               <label>User Name </label><br/>
+               
+               <input 
                                type="text" 
                                name="userName" 
                                value={this.state.userName}
@@ -63,14 +65,14 @@ class BookNow extends React.Component{
                                onChange={this.handleChange} 
                            /> 
                            <br/>
-                       Start:{'_____'}<input 
+                       <label>Start Time</label><br/><input 
                                type="datetime-local" 
                                name="startTime"
                                value={this.state.startTime}
                                onChange={this.handleChange}
                            /> 
                <br/>
-              End:{'______'}<input 
+               <label>End Time</label><br/> <input 
                                type="datetime-local" 
                                name="endTime" 
                                value={this.state.endTime}
@@ -78,7 +80,8 @@ class BookNow extends React.Component{
                                
                            /> 
                <br/>
-             Reason:{'___'}<input 
+             <label>Reason</label>
+             <br/><input 
                                type="text" 
                                name="purpose" 
                                value={this.state.purpose}

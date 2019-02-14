@@ -7,11 +7,12 @@ html,body {
 }
 .body
     {
+      
         flex-grow: 1;
-        flex-basis: 100%;
-        text-align: center;
+        flex-basis: 50%;
+         text-align: center; 
         padding: 60px;
-        background-image: url("myfigure.jpg");   
+        /* background-image: url("myfigure.jpg");    */
     }
     .center {
         margin: auto;
@@ -24,7 +25,7 @@ html,body {
             border-radius: 5px;
             background-color: rgba(76, 175, 80, 0.3);
             padding: 10px;
-            width:50%;
+            width:100%;
             font-size: 16px;
             margin-bottom: 20px;
             text-align: left;
@@ -102,6 +103,34 @@ main article {
     display: flex;
     justify-content: center;
     font-weight: bold;
+}
+.section {
+    flex-grow: .5;
+    flex-basis: 50%;
+    width:50%;
+    /* text-align: center; */
+    padding: 100px 20px 100px 20px;
+    /* background-image: url("myfigure.jpg");    */
+}
+.image {
+    display: flex;
+    background-image: url("myfigure.jpg");   
+}
+.imageOnly{
+    background-image: url("myfigure.jpg");
+}
+input {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  #first {
+      padding:210px 200px 260px 100px;
+      background-image: url("myfigure.jpg");
 }
 
 

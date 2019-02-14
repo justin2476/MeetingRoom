@@ -14,8 +14,8 @@ class CalendarDate extends React.Component {
     let doc = this.props.items;
     if (doc) {
         return (
-          <div>
-            <section className="body">
+          <div className="image">
+            <section className="section">
               <Calendar
                 className='center'
                 onChange={this.onChange}

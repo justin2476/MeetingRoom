@@ -40,9 +40,9 @@ class CalendarData extends React.Component {
                 });
 
             return (
-                <div>
-                    <div className="body">
-                        {(today.length === 0) ? (<h1>No Bookings yet</h1>) : (<div><h1 style={{ textAlign: "left" }}>Bookings till now</h1> {today}</div>)}
+                <div className='body'>
+                    <div >
+                        {(today.length === 0) ? (<h1 style={{margin:"189px 0px 200px 0px"}}>No Bookings yet</h1>) : (<div><h1 style={{ textAlign: "left" }}>Bookings till now</h1> {today}</div>)}
                     </div>
                 </div>
             )
