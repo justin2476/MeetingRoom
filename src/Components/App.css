@@ -1,0 +1,107 @@
+
+html,body {
+    padding: 0;
+    height: 100%;
+    margin: 0px;
+    overflow: 'auto';
+}
+.body
+    {
+        flex-grow: 1;
+        flex-basis: 100%;
+        text-align: center;
+        padding: 60px;
+        background-image: url("myfigure.jpg");   
+    }
+    .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid green;
+        padding: 10px;
+      }
+      .content 
+        {
+            border-radius: 5px;
+            background-color: rgba(76, 175, 80, 0.3);
+            padding: 10px;
+            width:50%;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+      
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+
+nav { 
+    padding: 10px;
+}
+body > section {
+    flex: 1 1 auto;
+    flex-direction: row;
+    height: 100%;
+    display: grid;
+    justify-content: top;
+}
+section > main {
+    flex-grow: 1;
+    flex-basis: 100%;
+    text-align: center;
+    padding: 20px;
+    background-image: url("myfigure.jpg");
+}
+button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+article {
+    border-radius: 5px;
+    background-color: rgba(76, 175, 80, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+ul li {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+header,
+body > section,
+main article {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
