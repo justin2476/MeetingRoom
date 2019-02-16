@@ -51,10 +51,10 @@ class BookNow extends React.Component{
     }
     render() {
         const divStyle = {
-            padding: 20
+            padding: "20px"
           };
     return (
-        <form style={divStyle} onSubmit={this.postHandler} >  
+        <form onSubmit={this.postHandler} >  
                <label>User Name </label><br/>
                
                <input 

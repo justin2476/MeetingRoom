@@ -120,8 +120,8 @@ main article {
     background-image: url("myfigure.jpg");
 }
 input {
-    width: 30%;
-    padding: 12px 20px;
+    width: 100%;
+padding: 10px 10px; 
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -134,3 +134,8 @@ input {
 }
 
 
+#footer {
+	background: #99bbff;
+    height: 50px;
+    clear: both;
+}

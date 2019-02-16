@@ -50,6 +50,7 @@ render(){
         </div>
     </Router>
     <Sidebar data={this.props.items}/>
+    <div id="footer"></div>
     </div>
   );
 }
