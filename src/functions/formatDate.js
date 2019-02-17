@@ -15,7 +15,8 @@ function formatDate(date) {
             hourFormatted = hour % 12 || 12, // hour returned in 24 hour format
             minuteFormatted = minute < 10 ? "0" + minute : minute,
             morning = hour < 12 ? "am" : "pm";
-    
+    if(month<10)
+    month='0'+month;
         return  day + "-" + month + "-" + year + " " + hourFormatted + ":" +
                 minuteFormatted + morning;
     }

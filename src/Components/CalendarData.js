@@ -57,14 +57,14 @@ class CalendarData extends React.Component {
                     }
                 });
                 today.push(
-                    <div className="content" key={'end'+'free'}>
+                    <div className="content" key={'free'}>
                       Slot is Free from {formatDate(freeStart).slice(10)+" to "+formatDate(freeEnd).slice(10)} 
                     </div>
                 )
             return (
                 <div className='body'>
                     <div id="scrollStyle">
-                        {(today.length === 0) ? (<h1 style={{margin:"189px 0px 200px 0px"}}>No Bookings yet</h1>) : (<div style={{width:"95%"}}><h1 style={{ textAlign: "left"}}>Bookings till now</h1> {today}</div>)}
+                        {(today.length === 0) ? (<h1 style={{margin:"189px 0px 200px 0px"}}>No Booking yet</h1>) : (<div style={{width:"95%"}}><h1 style={{ textAlign: "left"}}>Booking on {formatDate(this.props.today).slice(0,10)}</h1> {today}</div>)}
                     </div>
                 </div>
             )
