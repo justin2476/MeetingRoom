@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
             bottom: "20px",
             right: "20px",
             borderRadius: "5px",
-            backgroundColor: "#D2F4EE"
+            backgroundColor: "rgba(76, 175, 80, 0.3)"
         }
         if (!this.state.click)
             return (

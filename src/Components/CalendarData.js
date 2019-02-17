@@ -14,7 +14,7 @@ class CalendarData extends React.Component {
 }
     render() {
         let doc = this.props.items;
- 
+
 
         if (doc) {
             var start = new Date()
@@ -24,11 +24,25 @@ class CalendarData extends React.Component {
             end.setHours(23, 59, 59, 0)
             console.log(start+"<"+end)
             let today = []
+            let freeStart=start;
+            let freeSlotEnd=start;
+            let freeEnd=end;
             if (this.props.items)
             this.props.items.forEach(element => {
                     var s = new Date(element.startTime)
                     var e = new Date(element.endTime)
                     if (s > start && e < end) {
+                        freeSlotEnd=s;
+                        
+                        console.log(freeSlotEnd-freeStart)
+
+                        if((freeSlotEnd-freeStart)>=600000)
+                        today.push(
+                            <div className="content" key={element._id+'free'}>
+                              Slot is Free from {formatDate(freeStart).slice(10)+" to "+formatDate(freeSlotEnd).slice(10)} 
+                            </div>
+                        )
+                        freeStart=e;
                         today.push(
                             <div className="content" key={element._id}>
                                 User:{" "+ this.capital_letter(element.userName)}<br/>
@@ -36,13 +50,21 @@ class CalendarData extends React.Component {
                                 To :{" "+formatDate(element.endTime)}<br/>
                             </div>
                         )
+
+                    
+                      
+
                     }
                 });
-
+                today.push(
+                    <div className="content" key={'end'+'free'}>
+                      Slot is Free from {formatDate(freeStart).slice(10)+" to "+formatDate(freeEnd).slice(10)} 
+                    </div>
+                )
             return (
                 <div className='body'>
-                    <div >
-                        {(today.length === 0) ? (<h1 style={{margin:"189px 0px 200px 0px"}}>No Bookings yet</h1>) : (<div><h1 style={{ textAlign: "left" }}>Bookings till now</h1> {today}</div>)}
+                    <div id="scrollStyle">
+                        {(today.length === 0) ? (<h1 style={{margin:"189px 0px 200px 0px"}}>No Bookings yet</h1>) : (<div style={{width:"95%"}}><h1 style={{ textAlign: "left"}}>Bookings till now</h1> {today}</div>)}
                     </div>
                 </div>
             )

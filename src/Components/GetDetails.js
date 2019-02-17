@@ -12,6 +12,7 @@ class GetDetails extends Component {
 
             let nowBooked = null;
             let tillDate = null;
+            let flag=true;
             this.props.items.forEach(function (bookings) {
                 let date = new Date();
                 let start = new Date(bookings.startTime);
@@ -19,8 +20,9 @@ class GetDetails extends Component {
                 if (start < date && end > date) {
                     nowBooked = bookings
                 }
-                else if (start > date) {
-                    tillDate = ' till ' + formatDate( bookings.startTime);
+                else if (start > date&&flag) {
+                    tillDate = ' till ' + formatDate( bookings.startTime); 
+                    flag=false
                 }
 
             })

@@ -11,7 +11,7 @@ async function fetchingData(){
         .then(response => response.json())
         .then(data => {
             //sorting according to startTime decenting order larger time first 
-            data.sort(function (a, b) { return (a.startTime < b.startTime) ? 1 : ((b.startTime < a.startTime) ? -1 : 0) })
+            data.sort(function (a, b) { return (a.startTime < b.startTime) ? -1 : ((b.startTime < a.startTime) ? 1 : 0) })
             resolve(data)
             
         })

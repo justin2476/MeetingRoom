@@ -25,6 +25,7 @@ render(){
  const defaultStyle={
  
   color: "white",
+  fontSize:"25px"
 
 }
   return (

@@ -22,7 +22,8 @@ class BookNow extends React.Component{
     postHandler(){
         if(this.props.data)
       { 
-        let stat= CheckBooking([this.props.data,this.state.startTime,this.state.endTime])  
+        var statusArray=CheckBooking([this.props.data,this.state.startTime,this.state.endTime])  
+        let stat= statusArray[0]
       // console.log(stat)
        //alert(this.props.data[0])
         if(stat)
@@ -34,7 +35,6 @@ class BookNow extends React.Component{
                 })
       .then(res => {
         console.log(res);
-        alert(res.data);
         if(res.data==="No issue")
         alert("Booked Successfully")
         else
@@ -42,7 +42,7 @@ class BookNow extends React.Component{
       })}
       else
       {
-          alert("Already Booked")
+          alert(statusArray[1])
       }}
       else
       {
